@@ -1,9 +1,15 @@
+
 import React from 'react';
+import { Link } from 'react-router';
 
 const Navbar = () => {
     const links = <>
-    <li >Home</li>
-    <li className='ml-2'>About</li>
+        <div className='flex font-semibold'>
+            <Link to='/'><li >Home</li></Link>
+            <Link to='/about'><li className='ml-3'>About</li></Link>
+            <Link to='/readList'><li className='ml-3'>ReadList</li></Link>
+
+        </div>
     </>
     return (
         <div className="navbar bg-base-100 shadow-sm px-20">
@@ -15,7 +21,7 @@ const Navbar = () => {
                     <ul
                         tabIndex={0}
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                       {links}
+                        {links}
                     </ul>
                 </div>
                 <a className="btn btn-ghost text-xl">Book Vibe</a>
