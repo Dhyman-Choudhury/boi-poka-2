@@ -5,9 +5,9 @@ import { Link } from 'react-router';
 const Navbar = () => {
     const links = <>
         <div className='flex font-semibold'>
-            <Link to='/'><li >Home</li></Link>
-            <Link to='/about'><li className='ml-3'>About</li></Link>
-            <Link to='/readList'><li className='ml-3'>ReadList</li></Link>
+            <Link to='/'><li className='hover:btn hover:btn-outline hover:border-green-400 hover:text-green-400 hover:bg-white' >Home</li></Link>
+            <Link to='/about'><li className='ml-3 hover:btn hover:btn-outline hover:border-green-400 hover:text-green-400 hover:bg-white'>About</li></Link>
+            <Link to='/readList'><li className='ml-3 hover:btn hover:btn-outline hover:border-green-400 hover:text-green-400 hover:bg-white'>ReadList</li></Link>
 
         </div>
     </>
@@ -31,8 +31,9 @@ const Navbar = () => {
                     {links}
                 </ul>
             </div>
-            <div className="navbar-end">
-                <a className="btn">Button</a>
+            <div className="navbar-end ">
+                <a className="btn btn-success text-white mr-2">Sign In</a>
+                <a className="btn btn-info text-white ml-2">Sign up</a>
             </div>
         </div>
     );
